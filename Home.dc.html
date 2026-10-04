@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/icons.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/colors.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/typography.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/base.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/styles.css">
+<script src="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<title>Fonthealth Academy · Learning for Better Care</title>
+<style>body{margin:0;background:#fff;color:#454545}a{color:#1a384b}a:hover{color:#6d6465}</style>
+</helmet>
+<div style="font-family:var(--font-body);font-weight:300;color:var(--fh-text);background:#fff;min-height:100vh">
+
+<header style="background:#fff;border-bottom:1px solid var(--fh-taupe)">
+  <div style="max-width:1200px;margin:0 auto;padding:22px 30px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:28px">
+    <nav style="display:flex;flex-wrap:wrap;gap:12px 36px;justify-content:flex-end">
+      <a href="Home.dc.html" style="font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--fh-blue);padding:6px 0 4px;border-bottom:2px solid var(--fh-sand)">Home</a>
+      <a href="Values.dc.html" style="font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--fh-blue);padding:6px 0">Values</a>
+    </nav>
+    <a href="Home.dc.html" style="display:block"><x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.Logo" width="190" hint-size="190px,60px"></x-import></a>
+    <nav style="display:flex;flex-wrap:wrap;gap:12px 36px;justify-content:flex-start">
+      <a href="Competencies.dc.html" style="font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--fh-blue);padding:6px 0">Competencies</a>
+      <a href="Summary.dc.html" style="font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--fh-blue);padding:6px 0">Summary</a>
+    </nav>
+  </div>
+</header>
+
+<section data-screen-label="Hero" style="position:relative;min-height:560px;display:flex;align-items:flex-end;overflow:hidden;background:var(--fh-sage)">
+  <div style="position:absolute;inset:0"><image-slot id="home-hero" shape="rect" src="assets/images/hormone-couple.png" placeholder="Hero photo: team or patient care"></image-slot></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,56,75,.82) 0%,rgba(26,56,75,.55) 45%,rgba(26,56,75,0) 75%);pointer-events:none"></div>
+  <div style="position:relative;width:100%;max-width:1200px;margin:0 auto;padding:120px 30px 150px;display:flex;flex-direction:column;gap:22px;pointer-events:none">
+    <span style="font-weight:600;font-size:18px;letter-spacing:2px;text-transform:uppercase;color:#fff">Learning for Better Care</span>
+    <h1 style="margin:0;max-width:640px;font-family:var(--font-display);font-weight:400;font-size:62px;line-height:68px;letter-spacing:-0.5px;color:#fff">Fonthealth Academy</h1>
+    <p style="margin:0;max-width:520px;font-weight:300;font-size:22px;line-height:33px;color:#fff;text-wrap:pretty">Our values, and the competencies that show how they appear in everyday work.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;pointer-events:auto">
+      <x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.Button" variant="white" href="Values.dc.html" hint-size="150px,44px">Our values</x-import>
+      <x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.Button" variant="reverse" href="Competencies.dc.html" hint-size="170px,44px">The competencies</x-import>
+    </div>
+  </div>
+  <x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.CurveDivider" direction="down" hint-size="100%,71px"></x-import>
+</section>
+
+<section data-screen-label="Framework map">
+  <div style="max-width:1200px;margin:0 auto;padding:56px 30px 80px;display:flex;flex-direction:column;gap:36px">
+    <div style="display:flex;flex-wrap:wrap;gap:20px 48px;align-items:flex-end">
+      <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-weight:600;font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-taupe)">The framework</span>
+        <h2 style="margin:0;font-family:var(--font-display);font-weight:400;font-size:40px;line-height:50px;letter-spacing:-0.5px">Each value has one competency</h2>
+      </div>
+      <p style="flex:1 1 380px;margin:0;font-size:17px;line-height:26px;text-wrap:pretty">A value describes what matters and the question it owns. Its competency describes the behaviours we look for, at two levels: meets expectations and exceeds expectations.</p>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:grid;grid-template-columns:minmax(120px,0.7fr) minmax(200px,1.6fr) 40px minmax(200px,1.2fr);gap:20px;padding:0 0 10px;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-taupe)">
+        <span>Value</span><span>The question it owns</span><span></span><span>Competency</span>
+      </div>
+      <sc-for list="{{ rows }}" as="r" hint-placeholder-count="5">
+        <div style="display:grid;grid-template-columns:minmax(120px,0.7fr) minmax(200px,1.6fr) 40px minmax(200px,1.2fr);gap:20px;align-items:center;padding:20px 0;border-top:1px solid var(--fh-sage)">
+          <a href="Values.dc.html#{{ r.vid }}" style="font-family:var(--font-display);font-size:28px;line-height:34px;color:var(--fh-blue);text-decoration:none">{{ r.value }}</a>
+          <span style="font-size:17px;line-height:25px;font-weight:400">{{ r.question }}</span>
+          <i class="icon-arrow-right" style="font-size:22px;color:var(--fh-sand)"></i>
+          <a href="Competencies.dc.html#{{ r.cid }}" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--fh-blue)"><span style="font-family:var(--font-display);font-size:28px;color:var(--fh-sage)">{{ r.n }}</span><span style="font-family:var(--font-display);font-size:24px;line-height:30px">{{ r.comp }}</span></a>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Entry points" style="background:var(--fh-pale)">
+  <div style="max-width:1200px;margin:0 auto;padding:80px 30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div style="aspect-ratio:3/2;position:relative"><image-slot id="home-values" shape="rect" placeholder="Photo for Values" src="https://plus.unsplash.com/premium_photo-1666264200751-f2fd98360800?fm=jpg&amp;q=60&amp;w=1600&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0" credit="Photo by Thais Varela on Unsplash" credit-href="https://unsplash.com/@thaisvarela"></image-slot></div>
+      <h3 style="margin:0;font-family:var(--font-display);font-weight:400;font-size:32px;line-height:40px;letter-spacing:-0.5px">Our values</h3>
+      <p style="margin:0;font-size:17px;line-height:26px">What each value means with patients, with colleagues and in organisational decisions.</p>
+      <div><x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.Button" href="Values.dc.html" hint-size="150px,44px">Read the values</x-import></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div style="aspect-ratio:3/2;position:relative"><image-slot id="home-competencies" shape="rect" placeholder="Photo for Competencies" src="https://images.unsplash.com/photo-1612994451093-c6791c8989cd?fm=jpg&amp;q=60&amp;w=1600&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0" credit="Photo by Fabian Centeno on Unsplash" credit-href="https://unsplash.com/@real_chance12"></image-slot></div>
+      <h3 style="margin:0;font-family:var(--font-display);font-weight:400;font-size:32px;line-height:40px;letter-spacing:-0.5px">The competencies</h3>
+      <p style="margin:0;font-size:17px;line-height:26px">Behaviours on one scale, concrete examples for each context, and a self-assessment you can print.</p>
+      <div><x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.Button" href="Competencies.dc.html" hint-size="190px,44px">Explore the competencies</x-import></div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--fh-footer);color:#fff">
+  <div style="max-width:1200px;margin:0 auto;padding:48px 30px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px">
+    <x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.Logo" tone="white" width="170" hint-size="170px,54px"></x-import>
+    <span style="font-family:var(--font-display);font-size:22px;line-height:28px">Fonthealth Academy · Learning for Better Care</span>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){
+    const R=[['Care','Whose needs and wellbeing must we understand and consider?','consideration','Consideration for others'],
+    ['Integrity','What is truthful, ethical and professionally sound?','safe','Safe and honest practice'],
+    ['Accountability','What are we responsible for, and how will we follow through?','ownership','Purposeful ownership'],
+    ['Partnership','Whose contribution is needed, and how will we work together?','collaboration','Constructive collaboration'],
+    ['Growth','What do we need to learn or change to do better as needs evolve?','learning','Learning and adapting']];
+    return {rows:R.map(([value,question,cid,comp],i)=>({n:i+1,value,vid:value.toLowerCase(),question,cid,comp}))};
+  }
+}
+</script>
+</body>
+</html>

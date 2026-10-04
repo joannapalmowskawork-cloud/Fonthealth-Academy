@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/icons.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/colors.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/typography.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/base.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/styles.css">
+<script src="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<title>Values · Fonthealth Academy</title>
+<style>body{margin:0;background:#fff;color:#454545}a{color:#1a384b}a:hover{color:#6d6465}html{scroll-behavior:smooth}</style>
+</helmet>
+<div style="font-family:var(--font-body);font-weight:300;color:var(--fh-text);background:#fff;min-height:100vh">
+
+<header style="background:#fff;border-bottom:1px solid var(--fh-taupe)">
+  <div style="max-width:1200px;margin:0 auto;padding:22px 30px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:28px">
+    <nav style="display:flex;flex-wrap:wrap;gap:12px 36px;justify-content:flex-end">
+      <a href="Home.dc.html" style="font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--fh-blue);padding:6px 0">Home</a>
+      <a href="Values.dc.html" style="font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--fh-blue);padding:6px 0 4px;border-bottom:2px solid var(--fh-sand)">Values</a>
+    </nav>
+    <a href="Home.dc.html" style="display:block"><x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.Logo" width="190" hint-size="190px,60px"></x-import></a>
+    <nav style="display:flex;flex-wrap:wrap;gap:12px 36px;justify-content:flex-start">
+      <a href="Competencies.dc.html" style="font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--fh-blue);padding:6px 0">Competencies</a>
+      <a href="Summary.dc.html" style="font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--fh-blue);padding:6px 0">Summary</a>
+    </nav>
+  </div>
+</header>
+
+<section style="background:var(--fh-pale)">
+  <div style="max-width:1200px;margin:0 auto;padding:64px 30px 56px;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-end">
+    <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:20px">
+      <div><x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.Eyebrow" hint-size="150px,16px">Fonthealth Academy</x-import></div>
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:400;font-size:62px;line-height:68px;letter-spacing:-0.5px;color:var(--fh-blue)">Our values</h1>
+      <p style="margin:0;max-width:600px;font-weight:200;font-size:24px;line-height:36px;text-wrap:pretty">Five values guide how we work with patients, with each other and when we make decisions for the clinic. Each value owns one question.</p>
+    </div>
+    <nav style="flex:1 1 380px;display:flex;flex-direction:column">
+      <sc-for list="{{ values }}" as="v" hint-placeholder-count="5">
+        <a href="#{{ v.id }}" style="display:grid;grid-template-columns:150px minmax(0,1fr) 20px;gap:16px;align-items:center;padding:12px 0;border-top:1px solid var(--fh-sage);text-decoration:none;color:var(--fh-text)" style-hover="color:var(--fh-taupe)">
+          <span style="font-family:var(--font-display);font-size:24px;line-height:30px;color:var(--fh-blue)">{{ v.name }}</span>
+          <span style="font-size:15px;line-height:21px;font-weight:400">{{ v.question }}</span>
+          <i class="icon-arrow-down" style="color:var(--fh-taupe)"></i>
+        </a>
+      </sc-for>
+    </nav>
+  </div>
+</section>
+
+<sc-for list="{{ values }}" as="v" hint-placeholder-count="5">
+  <section id="{{ v.id }}" data-screen-label="Value {{ v.name }}" style="scroll-margin-top:20px">
+    <div style="max-width:1200px;margin:0 auto;padding:72px 30px;display:flex;flex-direction:column;gap:36px;border-bottom:1px solid var(--fh-sage)">
+      <div style="display:flex;flex-wrap:wrap;gap:24px 48px">
+        <div style="flex:1 1 360px;display:flex;flex-direction:column;gap:16px">
+          <span style="font-weight:600;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-taupe)">Value {{ v.n }}</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-weight:400;font-size:50px;line-height:58px;letter-spacing:-0.5px;color:var(--fh-blue)">{{ v.name }}</h2>
+          <p style="margin:0;font-family:var(--font-display);font-style:italic;font-size:24px;line-height:32px;color:var(--fh-taupe);text-wrap:pretty">“{{ v.question }}”</p>
+        </div>
+        <div style="flex:1 1 480px;display:flex;flex-direction:column;gap:20px;padding-top:30px">
+          <p style="margin:0;font-weight:200;font-size:24px;line-height:36px;text-wrap:pretty">{{ v.meaning }}</p>
+          <a href="Competencies.dc.html#{{ v.compId }}" style="display:inline-flex;align-items:center;gap:10px;align-self:flex-start;font-weight:600;font-size:14px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--fh-blue)">Competency: {{ v.comp }} <i class="icon-arrow-right"></i></a>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;background:var(--fh-sage)">
+        <sc-for list="{{ v.contexts }}" as="x" hint-placeholder-count="3">
+          <div style="background:#fff;padding:24px 24px 28px 0;display:flex;flex-direction:column;gap:12px">
+            <span style="display:flex;align-items:center;gap:10px;font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-blue)"><i class="{{ x.icon }}" style="font-size:20px;color:var(--fh-taupe)"></i>{{ x.label }}</span>
+            <p style="margin:0;font-size:17px;line-height:26px;text-wrap:pretty">{{ x.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+</sc-for>
+
+<section style="position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--fh-taupe)">
+  <div style="position:absolute;inset:0"><image-slot id="values-band" shape="rect" src="https://plus.unsplash.com/premium_photo-1666264200751-f2fd98360800?fm=jpg&amp;q=60&amp;w=2000&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0" credit="Photo by Thais Varela on Unsplash" credit-href="https://unsplash.com/@thaisvarela" placeholder="Team photo"></image-slot></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,#6d6465 0%,#c9ccbd 100%);mix-blend-mode:multiply;pointer-events:none"></div>
+  <x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.CurveDivider" direction="up" hint-size="100%,71px"></x-import>
+  <div style="position:relative;max-width:760px;padding:120px 30px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:24px;pointer-events:none">
+    <h2 style="margin:0;font-family:var(--font-display);font-weight:400;font-size:40px;line-height:50px;letter-spacing:-0.5px;color:#fff">See how each value shows up in everyday work</h2>
+    <div style="pointer-events:auto"><x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.Button" variant="reverse" href="Competencies.dc.html" hint-size="200px,44px">Explore the competencies</x-import></div>
+  </div>
+</section>
+
+<footer style="background:var(--fh-footer);color:#fff">
+  <div style="max-width:1200px;margin:0 auto;padding:48px 30px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px">
+    <x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.Logo" tone="white" width="170" hint-size="170px,54px"></x-import>
+    <span style="font-family:var(--font-display);font-size:22px;line-height:28px">Fonthealth Academy · Learning for Better Care</span>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const V=[
+['Care','People’s wellbeing, circumstances and perspectives matter. We seek to understand how our actions affect them and take their needs seriously.','Whose needs and wellbeing must we understand and consider?','consideration','Consideration for others',
+['Listen beyond the presenting issue, acknowledge concerns and involve patients in choices. Adapt explanations to their understanding and support their independence.','Ask about someone’s circumstances before making assumptions. Consider the effect of requests, feedback and working arrangements on their wellbeing. Respond sensitively when someone is struggling.','Consider the human consequences of changes, including who benefits, who carries additional burdens and whose needs may be overlooked. Build workable conditions for both patients and staff.']],
+['Integrity','Our work and communication deserve trust. We are truthful, protect confidential information and uphold professional and ethical standards, including when doing so is inconvenient.','What is truthful, ethical and professionally sound?','safe','Safe and honest practice',
+['Explain options, limitations, uncertainty and costs honestly. Protect privacy and respect consent. Avoid promises the clinic cannot substantiate.','Give accurate information, acknowledge mistakes and represent others’ contributions fairly. Handle sensitive information appropriately and raise concerns through suitable channels.','Make claims that evidence supports. Examine conflicts of interest, protect information and maintain essential safeguards when evaluating growth, efficiency or commercial opportunities.']],
+['Accountability','Commitments carry responsibility. We clarify what we own, act within our authority and remain answerable for our decisions, progress and follow-through.','What are we responsible for, and how will we follow through?','ownership','Purposeful ownership',
+['Make clear who will do what and when. Complete promised actions, explain delays and ensure unresolved matters have an identified owner.','Agree responsibilities and deadlines, make obstacles visible early and close the loop. Acknowledge the consequences of missed commitments and take appropriate corrective action.','Assign decision rights and named owners, provide the resources needed to deliver and review whether commitments were fulfilled. Leaders take responsibility for the conditions they create.']],
+['Partnership','Good outcomes depend on people contributing together. We combine perspectives and expertise, agree how to work together and respect each person’s contribution.','Whose contribution is needed, and how will we work together?','collaboration','Constructive collaboration',
+['Establish shared goals and clarify the respective roles of the patient and care team. Coordinate across practitioners so the patient experiences a coherent service.','Share relevant context, involve affected colleagues and work through disagreements constructively. Offer and request help within agreed responsibilities and competence.','Involve the people needed to understand and implement a decision. Design responsibilities and information flows across teams, and assess effects on the whole service.']],
+['Growth','We value learning, improvement and adaptability. We use feedback and evidence to strengthen our practice and prepare for changing needs.','What do we need to learn or change to do better as needs evolve?','learning','Learning and adapting',
+['Invite feedback, question assumptions and use what we learn to improve how care is delivered.','Seek and apply feedback, share useful learning and adjust working methods when needs or circumstances change.','Invest in people and capabilities needed now and in the future. Test improvements, assess their effects and revise priorities when evidence or circumstances warrant it.']]
+];
+const CX=[['With patients','icon-heart-handshake'],['With colleagues','icon-users'],['In organisational decisions','icon-building-2']];
+class Component extends DCLogic {
+  renderVals(){
+    return {values:V.map(([name,meaning,question,compId,comp,ctx],i)=>({n:i+1,id:name.toLowerCase(),name,meaning,question,compId,comp,
+      contexts:ctx.map((text,j)=>({text,label:CX[j][0],icon:CX[j][1]}))}))};
+  }
+}
+</script>
+</body>
+</html>

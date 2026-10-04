@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/icons.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/colors.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/typography.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/tokens/base.css">
+<link rel="stylesheet" href="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/styles.css">
+<script src="_ds/fonthealth-design-system-4ca74adb-54de-472a-aa3e-b8fd4d3e8a60/_ds_bundle.js"></script>
+<title>One-page summary · Fonthealth Academy</title>
+<style>body{margin:0;background:#e9ebee;color:#454545}a{color:#1a384b}a:hover{color:#6d6465}@page{size:11in 8.5in;margin:0}@media print{body{background:#fff}[data-noprint]{display:none !important}[data-sheet]{margin:0 !important;box-shadow:none !important}}</style>
+</helmet>
+<div style="font-family:var(--font-body);font-weight:300;color:var(--fh-text);padding:0 0 40px">
+  <div data-noprint="1" style="max-width:1056px;margin:0 auto;padding:20px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Home.dc.html" style="display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--fh-blue)"><i class="icon-arrow-left"></i>Back to Fonthealth Academy</a>
+    <button onClick="{{ printPage }}" style="min-height:44px;padding:0 24px;border-radius:25px;border:1px solid var(--fh-blue);background:var(--fh-blue);color:#fff;font-family:var(--font-action);font-weight:600;font-size:14px;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:8px"><i class="icon-printer"></i>Print summary</button>
+  </div>
+
+  <div data-sheet="1" data-screen-label="Summary page" style="width:1056px;height:816px;box-sizing:border-box;margin:0 auto;background:#fff;padding:30px 40px 26px;display:flex;flex-direction:column;gap:16px;overflow:hidden">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:16px;border-bottom:1px solid var(--fh-taupe)">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-taupe)">Fonthealth Academy · Learning for Better Care</span>
+        <h1 style="margin:0;font-family:var(--font-display);font-weight:400;font-size:34px;line-height:40px;letter-spacing:-0.5px;color:var(--fh-blue)">Values and competencies at a glance</h1>
+      </div>
+      <x-import component-from-global-scope="FonthealthDesignSystem_4ca74a.Logo" width="140" hint-size="140px,44px"></x-import>
+    </div>
+
+    <div style="flex:1;min-height:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:auto auto auto 1fr;gap:8px 16px">
+      <sc-for list="{{ cols }}" as="c" hint-placeholder-count="5">
+        <div style="display:grid;grid-row:span 4;grid-template-rows:subgrid">
+          <div style="background:var(--fh-blue);color:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:6px;box-sizing:border-box">
+            <span style="font-weight:600;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-sage)">Value</span>
+            <span style="font-family:var(--font-display);font-size:24px;line-height:28px">{{ c.value }}</span>
+            <span style="font-size:13px;line-height:18px;font-weight:400">{{ c.question }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding:2px 2px 8px;border-bottom:1px solid var(--fh-sage);box-sizing:border-box">
+            <span style="font-weight:600;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-taupe)">Competency {{ c.n }}</span>
+            <span style="font-family:var(--font-display);font-size:19px;line-height:23px;color:var(--fh-blue)">{{ c.comp }}</span>
+            <span style="font-size:13px;line-height:18px">{{ c.covers }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;padding:0 2px">
+            <span style="font-weight:600;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-taupe)">Behaviours</span>
+            <sc-for list="{{ c.facets }}" as="f" hint-placeholder-count="3">
+              <span style="display:flex;gap:8px;font-size:13px;line-height:18px;font-weight:400"><i class="icon-check" style="color:var(--fh-taupe);font-size:13px;padding-top:2px"></i>{{ f }}</span>
+            </sc-for>
+          </div>
+          <div style="align-self:end;display:flex;flex-direction:column;gap:6px;padding:10px 12px;background:var(--fh-pale)">
+            <span style="font-weight:600;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-taupe)">Self-check</span>
+            <div style="display:flex;gap:10px;font-size:12px;font-weight:400">
+              <span style="display:flex;align-items:center;gap:4px"><span style="width:11px;height:11px;border:1px solid var(--fh-taupe)"></span>Below</span>
+              <span style="display:flex;align-items:center;gap:4px"><span style="width:11px;height:11px;border:1px solid var(--fh-taupe)"></span>Meets</span>
+              <span style="display:flex;align-items:center;gap:4px"><span style="width:11px;height:11px;border:1px solid var(--fh-taupe)"></span>Exceeds</span>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-top:12px;border-top:1px solid var(--fh-sage);flex-shrink:0">
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <span style="display:flex;align-items:center;gap:8px;font-weight:600;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-blue)"><span style="width:10px;height:10px;border-radius:50%;background:var(--fh-blue)"></span>Meets expectations</span>
+        <span style="font-size:12px;line-height:17px">Meeting expectations is successful performance. It includes dependable follow-through, respectful conduct, appropriate anticipation and required safeguards.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <span style="display:flex;align-items:center;gap:8px;font-weight:600;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-taupe)"><span style="width:10px;height:10px;border-radius:50%;background:var(--fh-sand)"></span>Exceeds expectations</span>
+        <span style="font-size:12px;line-height:17px">Look for sustained evidence of stronger judgement, anticipation or handling of complexity relative to the role.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <span style="font-weight:600;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--fh-taupe)">Do not reward</span>
+        <span style="font-size:12px;line-height:17px">Overtime, output volume, extra projects, constant availability, visible enthusiasm, emotional display, promotion, loyalty, unauthorised risk-taking or taking over another person’s responsibilities.</span>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1100,&quot;height&quot;:920}}">
+class Component extends DCLogic {
+  renderVals(){
+    const D=[['Care','Whose needs and wellbeing must we understand and consider?','Consideration for others','Understanding and considering people.',['Understanding context','Communication and choice','Human consequences']],
+    ['Integrity','What is truthful, ethical and professionally sound?','Safe and honest practice','Trustworthiness, verification and safeguards.',['Accuracy and candour','Privacy and authority','Ethical judgement']],
+    ['Accountability','What are we responsible for, and how will we follow through?','Purposeful ownership','Responsibility, progress and closure.',['Clarity and priorities','Follow-through','Closure']],
+    ['Partnership','Whose contribution is needed, and how will we work together?','Constructive collaboration','Who contributes and how contributions fit together.',['Shared contribution','Information and coordination','Constructive disagreement']],
+    ['Growth','What do we need to learn or change to do better as needs evolve?','Learning and adapting','Changing practice in response to learning or changed circumstances.',['Applies learning','Questions and tests','Adapts to change','Reviews and adjusts practice']]];
+    return {printPage:()=>window.print(),cols:D.map(([value,question,comp,covers,facets],i)=>({n:i+1,value,question,comp,covers,facets}))};
+  }
+}
+</script>
+</body>
+</html>
